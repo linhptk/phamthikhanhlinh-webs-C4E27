@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+from matplotlib import pyplot
 mongo_uri = "mongodb://admin:admin@ds021182.mlab.com:21182/c4e"
 client = MongoClient(mongo_uri)
 # Get databese
@@ -13,20 +14,28 @@ events = 0
 ads = 0
 wom = 0
 
-all_customer = customer_collection.find()
+all_customer = list(customer_collection.find())
+# print(all_customer)
 for customer in all_customer:
     if customer["ref"] == "events":
         events = events + 1
-    if customer["ref"] == "wom":
+    elif customer["ref"] == "wom":
         wom = wom + 1
-    if customer ==  "ads":
+    elif customer["ref"] ==  "ads":
         ads = ads + 1
-
-from matplotlib import pyplot
+print("events:", events)
+print("ads:", ads)
+print("wom", wom)
 # 1. Prepare data
+ref_counts = ["events","ads","wom"]
 # 2 Prepare labels
+ref_name = ["events","advertisements","word of mouth"]
 # 3. Draw pie
-# 4. Show
+pyplot.pie(ref_counts,labels=ref_name, autopct="%1.f%%", shadow=True, explode=[0,0,0.1])
+pyplot.axis("equal")
+pyplot.title("Bieu do ex2")
 
+# 4. Show
+pyplot.show()
 
 
