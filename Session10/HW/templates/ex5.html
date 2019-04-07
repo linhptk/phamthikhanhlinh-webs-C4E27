@@ -9,11 +9,12 @@
 <body>
     <h1>River in Africa</h1>
     {% for river in all_river_html %}
-        {% if all_river_html.continent == "Africa" %}
+        {% if river.continent == "Africa" %}
             <b>Name: </b> {{ river.name }}<br>
             <b>Continent: </b> {{ river.continent }}<br>
             <b>Length: </b> {{ river.length }}<br>
-        {% endif %}
+        <hr>
+        {% endif %}  
     {% endfor %}
 
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    input[type=text]{
+        width: 50%;
+        border-radius: 4px;
+        margin: 8px 0;
+        padding: 8px;
+        box-sizing: border-box
+    }
+    input[type=text]:focus {
+        border-color: dodgerblue;
+        box-shadow: 0 0 8px dodgerblue;
+    }
+    label {
+    color: black;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 100%;
+    }
+    button {
+        background-color: blue;
+        border-radius: 8px;
+        border: none;
+        color: white;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        padding: 10px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    button:active {
+    background-color:blue;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+</style>
+<body>
+    <h1> Bike's Information </h1>
+    <from method="POST">
+        <label>Model</label>
+        <br>
+        <input name="input_model_html" type="text" placeholder="e.g.Honda">
+        <br>
+        <label>Daily fee (VND)</label>
+        <br>
+        <input name="input_dailyfee_html" type="text" placeholder="e.g.10000000">
+        <br>
+        <br>
+        <label>Image</label>
+        <br>
+        <input name="input_image_html" type="text" placeholder="e.g. honda.com.vn">
+        <br>
+        <label>Year</label>
+        <br>
+        <input name="input_year_html" type="text" placeholder="e.g.2013">
+        <br>
+        <button>Submit</button>
+    </from>
+</body>
+</html>

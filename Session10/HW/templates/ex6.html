@@ -7,12 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Rivers in ‘S. America’ continent with length less than 1000 km</h1>
+    <h1>Rivers in ‘S.America’ continent with length less than 1000 km</h1>
     {% for river in  all_river_html2 %}
-    {% if river.length < 1000 and river.continent == "S.America" %}
+    {% if river.length < 1000 and river.continent == "S. America" %}
     <b>Name: </b> {{ river.name }}<br>
     <b>Continent: </b> {{ river.continent }}<br>
     <b>Length: </b> {{ river.length }}<br>
+    <hr>
     {% endif %}
     {% endfor %}
 </body>

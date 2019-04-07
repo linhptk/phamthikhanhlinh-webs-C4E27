@@ -6,6 +6,6 @@ client = MongoClient(mongo_uri)
 
 db_mlab=client.c4e
 
-river_collection=db_mlab["data_river_collection"]
+river_collection=db_mlab["river"]
 # dict_river_collection=river_collection.find()
 # print(dict_river_collection)

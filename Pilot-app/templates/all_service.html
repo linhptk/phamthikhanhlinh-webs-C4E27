@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+        <a href="/logout"> Logout</a>
         {% for person in all_persons %}
     <div>
             {% if person.gender == 'male' %}
@@ -22,6 +23,7 @@
             <b>Available:</b>{{ person.available }}<br>
             <a href="/all-service/detail/{{person._id }}">Show detail</a>
             <a href="/all-service/delete/{{ person._id }}">Delete</a>
+            <a href="/all-service/update/{{ person._id }}">Update</a>
     </div>
    <hr>
     {% endfor %}
